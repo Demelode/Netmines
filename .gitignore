@@ -1,2 +1,5 @@
 venv
 *.pyc
+/netmines/settings.py
+netmines/settings-website.py
+netmines/db/
