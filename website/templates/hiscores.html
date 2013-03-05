@@ -2,7 +2,7 @@
 
 {% block navbar %}
   <ul class="nav">
-    <li><a href="/play">Play Netmines</a></li>
+    <li><a href="/play">Play</a></li>
     <li class="active"><a href="/hiscores">Hiscores</a></li>
     <li><a href="/about">About</a></li>
   </ul>
@@ -10,14 +10,89 @@
 
 {% block leftpanel %}
   <div class="well">
-    <div>
-      <h1>
-        Top Rankings here!
-      </h1>
-      <p>
-        1-50 ranks
-      </p>
-    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Account</th>
+            <th>Wins</th>
+            <th>Loses</th>
+            <th>+/-</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Rammohan </td>
+            <td>6</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Smita</td>
+            <td>5</td>
+            <td>4</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Rabindranath</td>
+            <td>2</td>
+            <td>2</td> 
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Timmmu</td>
+            <td>1</td>
+            <td>2</td> 
+            <td>-1</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Zingerwop</td>
+            <td>2</td>
+            <td>3</td> 
+            <td>-1</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Hellath</td>
+            <td>4</td>
+            <td>6</td> 
+            <td>-2</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Tyerion</td>
+            <td>2</td>
+            <td>5</td> 
+            <td>-3</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Baelish</td>
+            <td>1</td>
+            <td>5</td> 
+            <td>-4</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Snowhath</td>
+            <td>2</td>
+            <td>8</td> 
+            <td>-6</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Ugather</td>
+            <td>6</td>
+            <td>12</td> 
+            <td>-6</td>
+          </tr>
+        </tbody>
+      </table>
   </div>
 {% endblock %}
 

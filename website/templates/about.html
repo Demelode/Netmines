@@ -2,7 +2,7 @@
 
 {% block navbar %}
   <ul class="nav">
-    <li><a href="/play">Play Netmines</a></li>
+    <li><a href="/play">Play</a></li>
     <li><a href="/hiscores">Hiscores</a></li>
     <li class="active"><a href="/about">About</a></li>
   </ul>
@@ -11,8 +11,8 @@
 {% block leftpanel %}
     <div class="well well-large">
       {% for about in about_list %}
-        <h4>{{ about.title }}</h4>
-        {{ about.body }}
+        <h3>{{ about.title }}</h3>
+        <h5>{{ about.body }}</h5>
       {% endfor %}
     </div>
   
