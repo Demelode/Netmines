@@ -4,18 +4,18 @@
   <ul class="nav">
     <li><a href="/play">Play Netmines</a></li>
     <li><a href="/hiscores">Hiscores</a></li>
-    <li class="active"><a href="/about">About</a></li>
+    <li><a href="/about">About</a></li>
   </ul>
 {% endblock%}
 
 {% block leftpanel %}
+  {% for announcement in announcement_list %}
     <div class="well well-large">
-      {% for about in about_list %}
-        <h4>{{ about.title }}</h4>
-        {{ about.body }}
-      {% endfor %}
+      <h3>{{announcement.title}}</h3>
+      <h5>{{announcement.body}}</h5>
+      <h6>Posted by {{announcement.poster}} on {{announcement.date}}</h6>
     </div>
-  
+  {% endfor %}
 {% endblock %}
 
 {% block rightpanel %}

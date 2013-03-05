@@ -1,25 +1,35 @@
 {% extends "base.html" %}
 
-{% block title %}Play Netmines! {% endblock %}
-
 {% block navbar %}
-    	<ul class="nav">
-    		<li><a href="/announcements">Announcements</a></li>
-			<li class="active"><a href="/play">Play Netmines</a></li>
-			<li><a href="/rules">Rules</a></li>
-			<li><a href="/hiscores">Hiscores</a></li>
-			<li><a href="/about">About</a></li>
-   		</ul>
+  <ul class="nav">
+    <li class="active"><a href="/play">Play Netmines</a></li>
+    <li><a href="/hiscores">Hiscores</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
 {% endblock%}
 
-{% block hero %}
-	<h1>PLAY GAME HERO BANNER.</h1>
+{% block leftpanel %}
+  <div class="well">
+    <div>
+      <h1>
+        Game goes here!
+      </h1>
+      <p>
+        Boom Boom
+      </p>
+    </div>
+  </div>
 {% endblock %}
 
-{% block content %}
-	<div class="span8 offset2">
-		<div class="well well-large">
-			INSERT GAME HERE
-		</div>
-	</div>
+{% block rightpanel %}
+  <div class="well">
+    <div>
+      <h1>
+        Rules go here!
+      </h1>
+      <p>
+        OMG rulez.
+      </p>
+    </div>
+  </div>
 {% endblock %}

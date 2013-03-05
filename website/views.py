@@ -3,10 +3,10 @@ from django.shortcuts import render
 from website.models import Announcement, About
 
 
-def announcement(request):
-    announcement_list = Announcement.objects.order_by('-date')[:10]
+def main(request):
+    announcement_list = Announcement.objects.order_by('-date')[:3]
     context = {'announcement_list': announcement_list}
-    return render(request, 'announcement.html', context)
+    return render(request, 'main.html', context)
 
 
 def play(request):
@@ -18,10 +18,6 @@ def hiscores(request):
 
 
 def about(request):
-    about_list = About.objects.order_by('title')
+    about_list = About.objects.order_by('title')[:1]
     context = {'about_list': about_list}
     return render(request, 'about.html', context)
-
-
-def rules(request):
-    return render(request, 'rules.html')

@@ -9,17 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le styles -->
-    <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.min.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body { padding-top: 60px; /* 60px to make the container go all the way
+      to the bottom of the topbar */ }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
       </script>
     <![endif]-->
     <!-- Le fav and touch icons -->
-    <link rel="icon" type="image/ico" href="http://zytoz.com/css/netmines.ico"></link>
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -41,16 +43,8 @@
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
-              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="brand" href="/">Netmines</a>
-              <div class="nav-collapse collapse">
-                  {% block navbar %}
-                  {% endblock %}
-              </div>
+{% block navbar %}
+{% endblock %}
             </div>
           </div>
         </div> {# end navbar #}
@@ -69,28 +63,18 @@
     <div class="navbar navbar-fixed-bottom navbar-inverse">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="/">
-            Home
-          </a>
-          <ul class="nav">
-            <li>
-              <a href="/play">
-                Play
-              </a>
-            </li>
-            <li>
-              <a href="/hiscores">
-                Hiscores
-              </a>
-            </li>
-            <li>
-              <a href="/about">
-                About
-              </a>
-            </li>
-          </ul>
+{% block navbar %}
+{% endblock %}
         </div>
       </div>
     </div>
+
+    <style>
+      2
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+    </script>
+    <script src="assets/js/bootstrap.js">
+    </script>
   </body>
 </html>
