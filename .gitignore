@@ -2,3 +2,5 @@ venv
 *.pyc
 netmines/db/
 ftpsync.settings
+website/templates/jetstrap-project/
+website/templates/old/
