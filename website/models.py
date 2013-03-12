@@ -20,3 +20,27 @@ class Announcement(models.Model):
 class About(models.Model):
     title = models.CharField(max_length=50)
     body = models.TextField()
+
+
+class Account(models.Model):
+    name = models.CharField(max_length=12)
+    password = models.CharField(max_length=50)
+    wins = models.IntegerField()
+    loses = models.IntegerField()
+
+    def set_winner_of_game(self, result):
+        if result:
+            wins += 1
+        else:
+            loses += 1
+
+
+class Round(models.Model):
+    player_one_pick = models.IntegerField()
+    player_two_pick = models.IntegerField()
+    turn = models.BooleanField()  # True = player_one, False = player_two
+
+
+class Game(models.Model):
+    player_one = models.CharField(max_length=12)
+    player_two = models.CharField(max_length=12)

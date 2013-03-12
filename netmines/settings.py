@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'rest_framework',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -157,25 +158,30 @@ LOGGING = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
+
 # COMMENT/UNCOMMENT BELOW TO LOCALLY DEVELOP
 
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+# # Parse database configuration from $DATABASE_URL
+# import dj_database_url
+# DATABASES['default'] =  dj_database_url.config()
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-from os import environ
-from urlparse import urlparse
+# from os import environ
+# from urlparse import urlparse
 
-if environ.has_key('DATABASE_URL'):
-    url = urlparse(environ['DATABASE_URL'])
-    DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': url.path[1:],
-        'USER': url.username,
-        'PASSWORD': url.password,
-        'HOST': url.hostname,
-        'PORT': url.port,
-    }
+# if environ.has_key('DATABASE_URL'):
+#     url = urlparse(environ['DATABASE_URL'])
+#     DATABASES['default'] = {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': url.path[1:],
+#         'USER': url.username,
+#         'PASSWORD': url.password,
+#         'HOST': url.hostname,
+#         'PORT': url.port,
+#     }
