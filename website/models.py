@@ -42,5 +42,10 @@ class Round(models.Model):
 
 
 class Game(models.Model):
-    player_one = models.CharField(max_length=12)
-    player_two = models.CharField(max_length=12)
+    player_one = models.CharField(max_length=40)
+    player_two = models.CharField(max_length=40)
+    current_board_state = models.CharField(max_length=25) # 5x5 board size.
+    mine_board_state = models.CharField(max_length=25) # 5x5 board size.
+    winner = models.CharField(max_length=40)
+    turn = models.IntegerField()
+    gamestatus = models.IntegerField() # 0 is pre-game, 1 is currently playing, 2 is post-game
